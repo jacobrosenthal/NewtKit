@@ -7,35 +7,194 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3A6BB062030B549007AF2DB /* NewtKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A6BAFC2030B549007AF2DB /* NewtKit.framework */; };
+		F310C60D20409DD200D38489 /* NewtKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A6BAFF2030B549007AF2DB /* NewtKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F310C61220409DFD00D38489 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3CFF204099E100FC6957 /* Result.framework */; };
+		F310C61320409DFD00D38489 /* SwiftCBOR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */; };
+		F310C61D20409E3100D38489 /* NewtKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F310C61B20409E3100D38489 /* NewtKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F310C62120409E4900D38489 /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
+		F310C62220409E4900D38489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
+		F310C62320409E4900D38489 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
+		F310C62420409E4900D38489 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
+		F310C62520409E4900D38489 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
+		F310C62620409E4900D38489 /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
+		F310C62720409E4900D38489 /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
+		F310C62820409E4900D38489 /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
+		F310C62920409E4900D38489 /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
+		F310C62A20409E4900D38489 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
+		F310C62B20409E4900D38489 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
+		F310C62C20409E4900D38489 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
+		F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
+		F310C62E20409E4900D38489 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
+		F310C63320409E6200D38489 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3CFB204099E100FC6957 /* Result.framework */; };
+		F310C63420409E6200D38489 /* SwiftCBOR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */; };
+		F34D3D5720409D6800FC6957 /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
+		F34D3D5820409D6800FC6957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
+		F34D3D5920409D6800FC6957 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
+		F34D3D5A20409D6800FC6957 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
+		F34D3D5B20409D6800FC6957 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
+		F34D3D5C20409D6D00FC6957 /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
+		F34D3D5D20409D6D00FC6957 /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
+		F34D3D5E20409D6D00FC6957 /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
+		F34D3D5F20409D6D00FC6957 /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
+		F34D3D6020409D6D00FC6957 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
+		F34D3D6120409D6D00FC6957 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
+		F34D3D6220409D6D00FC6957 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
+		F34D3D6320409D6D00FC6957 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
+		F34D3D6420409D7200FC6957 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
+		F35FFDBA20338E5C00095DCA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
+		F35FFDBD203393D000095DCA /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
 		F3A6BB0B2030B549007AF2DB /* NewtKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB0A2030B549007AF2DB /* NewtKitTests.swift */; };
-		F3A6BB0D2030B549007AF2DB /* NewtKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A6BAFF2030B549007AF2DB /* NewtKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3A6BB1B2030B621007AF2DB /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
+		F3A6BB1E2030BC73007AF2DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
+		F3A6BB2C2030C21E007AF2DB /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
+		F3DD97152034B861006B1235 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
+		F3DD97192034B8DF006B1235 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
+		F3DD971C2034BE34006B1235 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
+		F3DD971F2034BEF7006B1235 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
+		F3E9D85520321B0A0085424F /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
+		F3E9D85A20321B990085424F /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
+		F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
+		F3E9D861203256120085424F /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F3A6BB072030B549007AF2DB /* PBXContainerItemProxy */ = {
+		F310C60E20409DF200D38489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F3A6BAF32030B549007AF2DB /* Project object */;
+			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F3A6BAFB2030B549007AF2DB;
-			remoteInfo = NewtKit;
+			remoteGlobalIDString = 37F34C001C0265AD00D36B5B;
+			remoteInfo = SwiftCBOR;
+		};
+		F310C61020409DF500D38489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D454807C1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		F310C62F20409E5300D38489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37F34C001C0265AD00D36B5B;
+			remoteInfo = SwiftCBOR;
+		};
+		F310C63120409E5300D38489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D45480561A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		F34D3CFA204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480571A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		F34D3CFC204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480671A9572F5009D7229;
+			remoteInfo = "Result-MacTests";
+		};
+		F34D3CFE204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D454807D1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		F34D3D00204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480871A957362009D7229;
+			remoteInfo = "Result-iOSTests";
+		};
+		F34D3D02204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
+		F34D3D04204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE541BA280E000130C48;
+			remoteInfo = "Result-tvOSTests";
+		};
+		F34D3D06204099E100FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579A31B2B788F005D26AE;
+			remoteInfo = "Result-watchOS";
+		};
+		F34D3D0D204099E500FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37F34C011C0265AD00D36B5B;
+			remoteInfo = SwiftCBOR;
+		};
+		F34D3D0F204099E500FC6957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37F34C0B1C0265AE00D36B5B;
+			remoteInfo = SwiftCBORTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F3A6BAFC2030B549007AF2DB /* NewtKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F310C61920409E3100D38489 /* NewtKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F310C61B20409E3100D38489 /* NewtKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtKit_macOS.h; sourceTree = "<group>"; };
+		F310C61C20409E3100D38489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F34D3CF0204099E100FC6957 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Vendor/Result/Result.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCBOR.xcodeproj; path = Vendor/SwiftCBOR/SwiftCBOR.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F34D3D4F20409D5800FC6957 /* NewtKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35FFDB620336CFD00095DCA /* Data+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Util.swift"; sourceTree = "<group>"; };
+		F35FFDB820338E5C00095DCA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F35FFDBB203393D000095DCA /* ResetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetOperation.swift; sourceTree = "<group>"; };
 		F3A6BAFF2030B549007AF2DB /* NewtKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtKit.h; sourceTree = "<group>"; };
 		F3A6BB002030B549007AF2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A6BB052030B549007AF2DB /* NewtKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewtKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6BB0A2030B549007AF2DB /* NewtKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtKitTests.swift; sourceTree = "<group>"; };
 		F3A6BB0C2030B549007AF2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A6BB192030B621007AF2DB /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
+		F3A6BB1C2030BC73007AF2DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3A6BB2A2030C21E007AF2DB /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		F3DD97132034B861006B1235 /* EraseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraseOperation.swift; sourceTree = "<group>"; };
+		F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOperation.swift; sourceTree = "<group>"; };
+		F3DD971A2034BE34006B1235 /* TestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOperation.swift; sourceTree = "<group>"; };
+		F3DD971D2034BEF7006B1235 /* UploadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadOperation.swift; sourceTree = "<group>"; };
+		F3E9D85320321B0A0085424F /* NewtOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtOperation.swift; sourceTree = "<group>"; };
+		F3E9D85820321B990085424F /* NewtService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtService.swift; sourceTree = "<group>"; };
+		F3E9D85B20321CD30085424F /* ImageListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListOperation.swift; sourceTree = "<group>"; };
+		F3E9D85F203256120085424F /* StatsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F3A6BAF82030B549007AF2DB /* Frameworks */ = {
+		F310C61520409E3100D38489 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F310C63320409E6200D38489 /* Result.framework in Frameworks */,
+				F310C63420409E6200D38489 /* SwiftCBOR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34D3D4B20409D5800FC6957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F310C61220409DFD00D38489 /* Result.framework in Frameworks */,
+				F310C61320409DFD00D38489 /* SwiftCBOR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,27 +202,93 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A6BB062030B549007AF2DB /* NewtKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F310C61A20409E3100D38489 /* NewtKit-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F310C61B20409E3100D38489 /* NewtKit_macOS.h */,
+				F310C61C20409E3100D38489 /* Info.plist */,
+			);
+			path = "NewtKit-macOS";
+			sourceTree = "<group>";
+		};
+		F34D3CC5204097AD00FC6957 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F35FFDB620336CFD00095DCA /* Data+Util.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F34D3CEF204099D500FC6957 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */,
+				F34D3CF0204099E100FC6957 /* Result.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		F34D3CF1204099E100FC6957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F34D3CFB204099E100FC6957 /* Result.framework */,
+				F34D3CFD204099E100FC6957 /* Result-MacTests.xctest */,
+				F34D3CFF204099E100FC6957 /* Result.framework */,
+				F34D3D01204099E100FC6957 /* Result-iOSTests.xctest */,
+				F34D3D03204099E100FC6957 /* Result.framework */,
+				F34D3D05204099E100FC6957 /* Result-tvOSTests.xctest */,
+				F34D3D07204099E100FC6957 /* Result.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F34D3D09204099E500FC6957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */,
+				F34D3D10204099E500FC6957 /* SwiftCBORTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F35FFDBE2033980800095DCA /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F3E9D85320321B0A0085424F /* NewtOperation.swift */,
+				F3E9D85B20321CD30085424F /* ImageListOperation.swift */,
+				F3E9D85F203256120085424F /* StatsOperation.swift */,
+				F35FFDBB203393D000095DCA /* ResetOperation.swift */,
+				F3DD97132034B861006B1235 /* EraseOperation.swift */,
+				F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */,
+				F3DD971A2034BE34006B1235 /* TestOperation.swift */,
+				F3DD971D2034BEF7006B1235 /* UploadOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
 		F3A6BAF22030B549007AF2DB = {
 			isa = PBXGroup;
 			children = (
 				F3A6BAFE2030B549007AF2DB /* NewtKit */,
 				F3A6BB092030B549007AF2DB /* NewtKitTests */,
+				F310C61A20409E3100D38489 /* NewtKit-macOS */,
 				F3A6BAFD2030B549007AF2DB /* Products */,
+				F3A6BB282030C0BC007AF2DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		F3A6BAFD2030B549007AF2DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3A6BAFC2030B549007AF2DB /* NewtKit.framework */,
 				F3A6BB052030B549007AF2DB /* NewtKitTests.xctest */,
+				F34D3D4F20409D5800FC6957 /* NewtKit.framework */,
+				F310C61920409E3100D38489 /* NewtKit_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +296,10 @@
 		F3A6BAFE2030B549007AF2DB /* NewtKit */ = {
 			isa = PBXGroup;
 			children = (
+				F34D3CEF204099D500FC6957 /* Vendor */,
 				F3A6BAFF2030B549007AF2DB /* NewtKit.h */,
+				F3E9D85E20321DFF0085424F /* Newt */,
+				F34D3CC5204097AD00FC6957 /* Extensions */,
 				F3A6BB002030B549007AF2DB /* Info.plist */,
 			);
 			path = NewtKit;
@@ -86,36 +314,86 @@
 			path = NewtKitTests;
 			sourceTree = "<group>";
 		};
+		F3A6BB282030C0BC007AF2DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3E9D85E20321DFF0085424F /* Newt */ = {
+			isa = PBXGroup;
+			children = (
+				F3E9D85820321B990085424F /* NewtService.swift */,
+				F3A6BB1C2030BC73007AF2DB /* Constants.swift */,
+				F3A6BB2A2030C21E007AF2DB /* Command.swift */,
+				F3A6BB192030B621007AF2DB /* Packet.swift */,
+				F35FFDB820338E5C00095DCA /* Image.swift */,
+				F35FFDBE2033980800095DCA /* Operations */,
+			);
+			path = Newt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F3A6BAF92030B549007AF2DB /* Headers */ = {
+		F310C61620409E3100D38489 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A6BB0D2030B549007AF2DB /* NewtKit.h in Headers */,
+				F310C61D20409E3100D38489 /* NewtKit_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34D3D4C20409D5800FC6957 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F310C60D20409DD200D38489 /* NewtKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F3A6BAFB2030B549007AF2DB /* NewtKit */ = {
+		F310C61820409E3100D38489 /* NewtKit-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3A6BB102030B549007AF2DB /* Build configuration list for PBXNativeTarget "NewtKit" */;
+			buildConfigurationList = F310C61E20409E3100D38489 /* Build configuration list for PBXNativeTarget "NewtKit-macOS" */;
 			buildPhases = (
-				F3A6BAF72030B549007AF2DB /* Sources */,
-				F3A6BAF82030B549007AF2DB /* Frameworks */,
-				F3A6BAF92030B549007AF2DB /* Headers */,
-				F3A6BAFA2030B549007AF2DB /* Resources */,
+				F310C61420409E3100D38489 /* Sources */,
+				F310C61520409E3100D38489 /* Frameworks */,
+				F310C61620409E3100D38489 /* Headers */,
+				F310C61720409E3100D38489 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F310C63020409E5300D38489 /* PBXTargetDependency */,
+				F310C63220409E5300D38489 /* PBXTargetDependency */,
 			);
-			name = NewtKit;
-			productName = NewtKit;
-			productReference = F3A6BAFC2030B549007AF2DB /* NewtKit.framework */;
+			name = "NewtKit-macOS";
+			productName = "NewtKit-macOS";
+			productReference = F310C61920409E3100D38489 /* NewtKit_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F34D3D4E20409D5800FC6957 /* NewtKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F34D3D5420409D5800FC6957 /* Build configuration list for PBXNativeTarget "NewtKit-iOS" */;
+			buildPhases = (
+				F34D3D4A20409D5800FC6957 /* Sources */,
+				F34D3D4B20409D5800FC6957 /* Frameworks */,
+				F34D3D4C20409D5800FC6957 /* Headers */,
+				F34D3D4D20409D5800FC6957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F310C60F20409DF200D38489 /* PBXTargetDependency */,
+				F310C61120409DF500D38489 /* PBXTargetDependency */,
+			);
+			name = "NewtKit-iOS";
+			productName = "NewtKit-iOS";
+			productReference = F34D3D4F20409D5800FC6957 /* NewtKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F3A6BB042030B549007AF2DB /* NewtKitTests */ = {
@@ -129,7 +407,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F3A6BB082030B549007AF2DB /* PBXTargetDependency */,
 			);
 			name = NewtKitTests;
 			productName = NewtKitTests;
@@ -146,7 +423,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Chipp'd";
 				TargetAttributes = {
-					F3A6BAFB2030B549007AF2DB = {
+					F310C61820409E3100D38489 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F34D3D4E20409D5800FC6957 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -166,16 +447,100 @@
 			mainGroup = F3A6BAF22030B549007AF2DB;
 			productRefGroup = F3A6BAFD2030B549007AF2DB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F34D3CF1204099E100FC6957 /* Products */;
+					ProjectRef = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
+				},
+				{
+					ProductGroup = F34D3D09204099E500FC6957 /* Products */;
+					ProjectRef = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				F3A6BAFB2030B549007AF2DB /* NewtKit */,
 				F3A6BB042030B549007AF2DB /* NewtKitTests */,
+				F34D3D4E20409D5800FC6957 /* NewtKit-iOS */,
+				F310C61820409E3100D38489 /* NewtKit-macOS */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F34D3CFB204099E100FC6957 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F34D3CFA204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3CFD204099E100FC6957 /* Result-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-MacTests.xctest";
+			remoteRef = F34D3CFC204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3CFF204099E100FC6957 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F34D3CFE204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D01204099E100FC6957 /* Result-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-iOSTests.xctest";
+			remoteRef = F34D3D00204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D03204099E100FC6957 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F34D3D02204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D05204099E100FC6957 /* Result-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-tvOSTests.xctest";
+			remoteRef = F34D3D04204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D07204099E100FC6957 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F34D3D06204099E100FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftCBOR.framework;
+			remoteRef = F34D3D0D204099E500FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F34D3D10204099E500FC6957 /* SwiftCBORTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftCBORTests.xctest;
+			remoteRef = F34D3D0F204099E500FC6957 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		F3A6BAFA2030B549007AF2DB /* Resources */ = {
+		F310C61720409E3100D38489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34D3D4D20409D5800FC6957 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,10 +557,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F3A6BAF72030B549007AF2DB /* Sources */ = {
+		F310C61420409E3100D38489 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F310C62120409E4900D38489 /* NewtService.swift in Sources */,
+				F310C62220409E4900D38489 /* Constants.swift in Sources */,
+				F310C62320409E4900D38489 /* Command.swift in Sources */,
+				F310C62420409E4900D38489 /* Packet.swift in Sources */,
+				F310C62520409E4900D38489 /* Image.swift in Sources */,
+				F310C62620409E4900D38489 /* NewtOperation.swift in Sources */,
+				F310C62720409E4900D38489 /* ImageListOperation.swift in Sources */,
+				F310C62820409E4900D38489 /* StatsOperation.swift in Sources */,
+				F310C62920409E4900D38489 /* ResetOperation.swift in Sources */,
+				F310C62A20409E4900D38489 /* EraseOperation.swift in Sources */,
+				F310C62B20409E4900D38489 /* ConfirmOperation.swift in Sources */,
+				F310C62C20409E4900D38489 /* TestOperation.swift in Sources */,
+				F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */,
+				F310C62E20409E4900D38489 /* Data+Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F34D3D4A20409D5800FC6957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34D3D6420409D7200FC6957 /* Data+Util.swift in Sources */,
+				F34D3D5C20409D6D00FC6957 /* NewtOperation.swift in Sources */,
+				F34D3D5D20409D6D00FC6957 /* ImageListOperation.swift in Sources */,
+				F34D3D5E20409D6D00FC6957 /* StatsOperation.swift in Sources */,
+				F34D3D5F20409D6D00FC6957 /* ResetOperation.swift in Sources */,
+				F34D3D6020409D6D00FC6957 /* EraseOperation.swift in Sources */,
+				F34D3D6120409D6D00FC6957 /* ConfirmOperation.swift in Sources */,
+				F34D3D6220409D6D00FC6957 /* TestOperation.swift in Sources */,
+				F34D3D6320409D6D00FC6957 /* UploadOperation.swift in Sources */,
+				F34D3D5720409D6800FC6957 /* NewtService.swift in Sources */,
+				F34D3D5820409D6800FC6957 /* Constants.swift in Sources */,
+				F34D3D5920409D6800FC6957 /* Command.swift in Sources */,
+				F34D3D5A20409D6800FC6957 /* Packet.swift in Sources */,
+				F34D3D5B20409D6800FC6957 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,21 +603,146 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DD97192034B8DF006B1235 /* ConfirmOperation.swift in Sources */,
+				F3DD971C2034BE34006B1235 /* TestOperation.swift in Sources */,
 				F3A6BB0B2030B549007AF2DB /* NewtKitTests.swift in Sources */,
+				F3DD97152034B861006B1235 /* EraseOperation.swift in Sources */,
+				F35FFDBA20338E5C00095DCA /* Image.swift in Sources */,
+				F3E9D85520321B0A0085424F /* NewtOperation.swift in Sources */,
+				F35FFDBD203393D000095DCA /* ResetOperation.swift in Sources */,
+				F3E9D85A20321B990085424F /* NewtService.swift in Sources */,
+				F3DD971F2034BEF7006B1235 /* UploadOperation.swift in Sources */,
+				F3A6BB1B2030B621007AF2DB /* Packet.swift in Sources */,
+				F3A6BB1E2030BC73007AF2DB /* Constants.swift in Sources */,
+				F3A6BB2C2030C21E007AF2DB /* Command.swift in Sources */,
+				F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */,
+				F3E9D861203256120085424F /* StatsOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F3A6BB082030B549007AF2DB /* PBXTargetDependency */ = {
+		F310C60F20409DF200D38489 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F3A6BAFB2030B549007AF2DB /* NewtKit */;
-			targetProxy = F3A6BB072030B549007AF2DB /* PBXContainerItemProxy */;
+			name = SwiftCBOR;
+			targetProxy = F310C60E20409DF200D38489 /* PBXContainerItemProxy */;
+		};
+		F310C61120409DF500D38489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-iOS";
+			targetProxy = F310C61020409DF500D38489 /* PBXContainerItemProxy */;
+		};
+		F310C63020409E5300D38489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCBOR;
+			targetProxy = F310C62F20409E5300D38489 /* PBXContainerItemProxy */;
+		};
+		F310C63220409E5300D38489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-Mac";
+			targetProxy = F310C63120409E5300D38489 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F310C61F20409E3100D38489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N5L4B84AM5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "NewtKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chippd.NewtKit-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		F310C62020409E3100D38489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N5L4B84AM5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "NewtKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chippd.NewtKit-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		F34D3D5520409D5800FC6957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N5L4B84AM5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/NewtKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chippd.NewtKit-iOS";
+				PRODUCT_NAME = NewtKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		F34D3D5620409D5800FC6957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N5L4B84AM5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/NewtKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chippd.NewtKit-iOS";
+				PRODUCT_NAME = NewtKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		F3A6BB0E2030B549007AF2DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,7 +792,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +847,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -331,51 +858,10 @@
 			};
 			name = Release;
 		};
-		F3A6BB112030B549007AF2DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N5L4B84AM5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NewtKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chippd.NewtKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F3A6BB122030B549007AF2DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N5L4B84AM5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NewtKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chippd.NewtKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		F3A6BB142030B549007AF2DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5L4B84AM5;
 				INFOPLIST_FILE = NewtKitTests/Info.plist;
@@ -390,6 +876,7 @@
 		F3A6BB152030B549007AF2DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N5L4B84AM5;
 				INFOPLIST_FILE = NewtKitTests/Info.plist;
@@ -404,20 +891,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F310C61E20409E3100D38489 /* Build configuration list for PBXNativeTarget "NewtKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F310C61F20409E3100D38489 /* Debug */,
+				F310C62020409E3100D38489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F34D3D5420409D5800FC6957 /* Build configuration list for PBXNativeTarget "NewtKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34D3D5520409D5800FC6957 /* Debug */,
+				F34D3D5620409D5800FC6957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3A6BAF62030B549007AF2DB /* Build configuration list for PBXProject "NewtKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3A6BB0E2030B549007AF2DB /* Debug */,
 				F3A6BB0F2030B549007AF2DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3A6BB102030B549007AF2DB /* Build configuration list for PBXNativeTarget "NewtKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3A6BB112030B549007AF2DB /* Debug */,
-				F3A6BB122030B549007AF2DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

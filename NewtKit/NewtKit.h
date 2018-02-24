@@ -6,7 +6,7 @@
 //  Copyright © 2018 Chipp'd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for NewtKit.
 FOUNDATION_EXPORT double NewtKitVersionNumber;
@@ -16,4 +16,9 @@ FOUNDATION_EXPORT const unsigned char NewtKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NewtKit/PublicHeader.h>
 
+#if DEBUG
+	#define DLOG(x) print(x)
+#else
+	#define DLOG(x)
+#endif
 
