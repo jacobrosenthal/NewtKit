@@ -78,9 +78,13 @@ public class NewtService {
 		operationQueue.addOperation(ResetOperation(newtService: self, result: result))
 	}
 	
-	public func stats() {
-		operationQueue.addOperation(StatsOperation(newtService: self))
+    public func statsList(result: StatsListResultClosure?) {
+		operationQueue.addOperation(StatsListOperation(newtService: self, result: result))
 	}
+    
+    public func stats(name: String, result: StatsResultClosure?) {
+        operationQueue.addOperation(StatsOperation(newtService: self, name: name, result: result))
+    }
 	
 	public func imageList(result: ImageResultClosure?) {
 		operationQueue.addOperation(ImageListOperation(newtService: self, result: result))
@@ -101,4 +105,51 @@ public class NewtService {
 	public func upload(data: Data, progress: UploadProgressClosure?, result: UploadResultClosure?) {
 		operationQueue.addOperation(UploadOperation(newtService: self, data: data, progress: progress, result: result))
 	}
+    
+    public func taskStats(result: TastStatsResultClosure?) {
+        operationQueue.addOperation(TaskStatsOperation(newtService: self, result: result))
+    }
+    
+    public func mpStats(result: MPStatsResultClosure?) {
+        operationQueue.addOperation(MPStatsOperation(newtService: self, result: result))
+    }
+    
+    public func logClear(result: LogClearResultClosure?) {
+        operationQueue.addOperation(LogClearOperation(newtService: self, result: result))
+    }
+    
+    public func logLevelList(result: LogLevelListResultClosure?) {
+        operationQueue.addOperation(LogLevelListOperation(newtService: self, result: result))
+    }
+    
+    public func logList(result: LogListResultClosure?) {
+        operationQueue.addOperation(LogListOperation(newtService: self, result: result))
+    }
+    
+    public func logModuleList(result: LogModuleListResultClosure?) {
+        operationQueue.addOperation(LogModuleListOperation(newtService: self, result: result))
+    }
+    
+    public func logShow(logName: String = "", min: Int = 0, timestamp: Int = 0, result: LogShowResultClosure?) {
+        operationQueue.addOperation(LogShowOperation(newtService: self, logName: logName, min: min, timestamp: timestamp, result: result))
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

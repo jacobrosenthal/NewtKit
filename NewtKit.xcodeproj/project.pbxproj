@@ -13,12 +13,11 @@
 		F310C61D20409E3100D38489 /* NewtKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F310C61B20409E3100D38489 /* NewtKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F310C62120409E4900D38489 /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
 		F310C62220409E4900D38489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
-		F310C62320409E4900D38489 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
 		F310C62420409E4900D38489 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
 		F310C62520409E4900D38489 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
 		F310C62620409E4900D38489 /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
 		F310C62720409E4900D38489 /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
-		F310C62820409E4900D38489 /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
+		F310C62820409E4900D38489 /* StatsListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsListOperation.swift */; };
 		F310C62920409E4900D38489 /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
 		F310C62A20409E4900D38489 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
 		F310C62B20409E4900D38489 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
@@ -27,26 +26,63 @@
 		F310C62E20409E4900D38489 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
 		F310C63320409E6200D38489 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3CFB204099E100FC6957 /* Result.framework */; };
 		F310C63420409E6200D38489 /* SwiftCBOR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */; };
+		F34D073B205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
+		F34D073C205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
+		F34D073D205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
+		F34D0746205D200E00946F3F /* TaskStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0745205D200E00946F3F /* TaskStat.swift */; };
+		F34D0747205D200E00946F3F /* TaskStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0745205D200E00946F3F /* TaskStat.swift */; };
+		F34D0748205D200E00946F3F /* TaskStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0745205D200E00946F3F /* TaskStat.swift */; };
+		F34D074A205D2ED400946F3F /* MPStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0749205D2ED400946F3F /* MPStatsOperation.swift */; };
+		F34D074B205D2ED400946F3F /* MPStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0749205D2ED400946F3F /* MPStatsOperation.swift */; };
+		F34D074C205D2ED400946F3F /* MPStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0749205D2ED400946F3F /* MPStatsOperation.swift */; };
+		F34D0758205D37AA00946F3F /* MPStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0757205D37AA00946F3F /* MPStat.swift */; };
+		F34D0759205D37AA00946F3F /* MPStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0757205D37AA00946F3F /* MPStat.swift */; };
+		F34D075A205D37AA00946F3F /* MPStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0757205D37AA00946F3F /* MPStat.swift */; };
+		F34D0762205D3CFF00946F3F /* LogClearOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0761205D3CFF00946F3F /* LogClearOperation.swift */; };
+		F34D0763205D3CFF00946F3F /* LogClearOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0761205D3CFF00946F3F /* LogClearOperation.swift */; };
+		F34D0764205D3CFF00946F3F /* LogClearOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0761205D3CFF00946F3F /* LogClearOperation.swift */; };
+		F34D0766205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0765205D3D0C00946F3F /* LogLevelListOperation.swift */; };
+		F34D0767205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0765205D3D0C00946F3F /* LogLevelListOperation.swift */; };
+		F34D0768205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0765205D3D0C00946F3F /* LogLevelListOperation.swift */; };
+		F34D076E205D3D1C00946F3F /* LogListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D076D205D3D1C00946F3F /* LogListOperation.swift */; };
+		F34D076F205D3D1C00946F3F /* LogListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D076D205D3D1C00946F3F /* LogListOperation.swift */; };
+		F34D0770205D3D1C00946F3F /* LogListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D076D205D3D1C00946F3F /* LogListOperation.swift */; };
+		F34D0772205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0771205D3D2F00946F3F /* LogModuleListOperation.swift */; };
+		F34D0773205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0771205D3D2F00946F3F /* LogModuleListOperation.swift */; };
+		F34D0774205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0771205D3D2F00946F3F /* LogModuleListOperation.swift */; };
+		F34D0776205D3D3D00946F3F /* LogShowOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0775205D3D3D00946F3F /* LogShowOperation.swift */; };
+		F34D0777205D3D3D00946F3F /* LogShowOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0775205D3D3D00946F3F /* LogShowOperation.swift */; };
+		F34D0778205D3D3D00946F3F /* LogShowOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0775205D3D3D00946F3F /* LogShowOperation.swift */; };
+		F34D077A205D426900946F3F /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0779205D426900946F3F /* LogLevel.swift */; };
+		F34D077B205D426900946F3F /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0779205D426900946F3F /* LogLevel.swift */; };
+		F34D077C205D426900946F3F /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0779205D426900946F3F /* LogLevel.swift */; };
+		F34D077E205D439000946F3F /* LogModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D077D205D439000946F3F /* LogModule.swift */; };
+		F34D077F205D439000946F3F /* LogModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D077D205D439000946F3F /* LogModule.swift */; };
+		F34D0780205D439000946F3F /* LogModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D077D205D439000946F3F /* LogModule.swift */; };
+		F34D0782205D6ABB00946F3F /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0781205D6ABB00946F3F /* StatsOperation.swift */; };
+		F34D0783205D6ABB00946F3F /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0781205D6ABB00946F3F /* StatsOperation.swift */; };
+		F34D0784205D6ABB00946F3F /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D0781205D6ABB00946F3F /* StatsOperation.swift */; };
 		F34D3D5720409D6800FC6957 /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
 		F34D3D5820409D6800FC6957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
-		F34D3D5920409D6800FC6957 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
 		F34D3D5A20409D6800FC6957 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
 		F34D3D5B20409D6800FC6957 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
 		F34D3D5C20409D6D00FC6957 /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
 		F34D3D5D20409D6D00FC6957 /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
-		F34D3D5E20409D6D00FC6957 /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
+		F34D3D5E20409D6D00FC6957 /* StatsListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsListOperation.swift */; };
 		F34D3D5F20409D6D00FC6957 /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
 		F34D3D6020409D6D00FC6957 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
 		F34D3D6120409D6D00FC6957 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
 		F34D3D6220409D6D00FC6957 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
 		F34D3D6320409D6D00FC6957 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
 		F34D3D6420409D7200FC6957 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
+		F3525A4E205D6BFF004547F6 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3525A4D205D6BFF004547F6 /* Stat.swift */; };
+		F3525A4F205D6BFF004547F6 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3525A4D205D6BFF004547F6 /* Stat.swift */; };
+		F3525A50205D6BFF004547F6 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3525A4D205D6BFF004547F6 /* Stat.swift */; };
 		F35FFDBA20338E5C00095DCA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB820338E5C00095DCA /* Image.swift */; };
 		F35FFDBD203393D000095DCA /* ResetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDBB203393D000095DCA /* ResetOperation.swift */; };
 		F3A6BB0B2030B549007AF2DB /* NewtKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB0A2030B549007AF2DB /* NewtKitTests.swift */; };
 		F3A6BB1B2030B621007AF2DB /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB192030B621007AF2DB /* Packet.swift */; };
 		F3A6BB1E2030BC73007AF2DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
-		F3A6BB2C2030C21E007AF2DB /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB2A2030C21E007AF2DB /* Command.swift */; };
 		F3DD97152034B861006B1235 /* EraseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97132034B861006B1235 /* EraseOperation.swift */; };
 		F3DD97192034B8DF006B1235 /* ConfirmOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */; };
 		F3DD971C2034BE34006B1235 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
@@ -54,7 +90,7 @@
 		F3E9D85520321B0A0085424F /* NewtOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85320321B0A0085424F /* NewtOperation.swift */; };
 		F3E9D85A20321B990085424F /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
 		F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
-		F3E9D861203256120085424F /* StatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsOperation.swift */; };
+		F3E9D861203256120085424F /* StatsListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsListOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,9 +191,22 @@
 		F310C61920409E3100D38489 /* NewtKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F310C61B20409E3100D38489 /* NewtKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtKit_macOS.h; sourceTree = "<group>"; };
 		F310C61C20409E3100D38489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatsOperation.swift; sourceTree = "<group>"; };
+		F34D0745205D200E00946F3F /* TaskStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStat.swift; sourceTree = "<group>"; };
+		F34D0749205D2ED400946F3F /* MPStatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPStatsOperation.swift; sourceTree = "<group>"; };
+		F34D0757205D37AA00946F3F /* MPStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPStat.swift; sourceTree = "<group>"; };
+		F34D0761205D3CFF00946F3F /* LogClearOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogClearOperation.swift; sourceTree = "<group>"; };
+		F34D0765205D3D0C00946F3F /* LogLevelListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevelListOperation.swift; sourceTree = "<group>"; };
+		F34D076D205D3D1C00946F3F /* LogListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListOperation.swift; sourceTree = "<group>"; };
+		F34D0771205D3D2F00946F3F /* LogModuleListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModuleListOperation.swift; sourceTree = "<group>"; };
+		F34D0775205D3D3D00946F3F /* LogShowOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogShowOperation.swift; sourceTree = "<group>"; };
+		F34D0779205D426900946F3F /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		F34D077D205D439000946F3F /* LogModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModule.swift; sourceTree = "<group>"; };
+		F34D0781205D6ABB00946F3F /* StatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsOperation.swift; sourceTree = "<group>"; };
 		F34D3CF0204099E100FC6957 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Vendor/Result/Result.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCBOR.xcodeproj; path = Vendor/SwiftCBOR/SwiftCBOR.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F34D3D4F20409D5800FC6957 /* NewtKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3525A4D205D6BFF004547F6 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		F35FFDB620336CFD00095DCA /* Data+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Util.swift"; sourceTree = "<group>"; };
 		F35FFDB820338E5C00095DCA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F35FFDBB203393D000095DCA /* ResetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetOperation.swift; sourceTree = "<group>"; };
@@ -168,7 +217,6 @@
 		F3A6BB0C2030B549007AF2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A6BB192030B621007AF2DB /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		F3A6BB1C2030BC73007AF2DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F3A6BB2A2030C21E007AF2DB /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		F3DD97132034B861006B1235 /* EraseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraseOperation.swift; sourceTree = "<group>"; };
 		F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOperation.swift; sourceTree = "<group>"; };
 		F3DD971A2034BE34006B1235 /* TestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOperation.swift; sourceTree = "<group>"; };
@@ -176,7 +224,7 @@
 		F3E9D85320321B0A0085424F /* NewtOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtOperation.swift; sourceTree = "<group>"; };
 		F3E9D85820321B990085424F /* NewtService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtService.swift; sourceTree = "<group>"; };
 		F3E9D85B20321CD30085424F /* ImageListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListOperation.swift; sourceTree = "<group>"; };
-		F3E9D85F203256120085424F /* StatsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsOperation.swift; sourceTree = "<group>"; };
+		F3E9D85F203256120085424F /* StatsListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsListOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +263,19 @@
 				F310C61C20409E3100D38489 /* Info.plist */,
 			);
 			path = "NewtKit-macOS";
+			sourceTree = "<group>";
+		};
+		F34D0744205D1FFA00946F3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F35FFDB820338E5C00095DCA /* Image.swift */,
+				F34D0745205D200E00946F3F /* TaskStat.swift */,
+				F34D0757205D37AA00946F3F /* MPStat.swift */,
+				F34D0779205D426900946F3F /* LogLevel.swift */,
+				F34D077D205D439000946F3F /* LogModule.swift */,
+				F3525A4D205D6BFF004547F6 /* Stat.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F34D3CC5204097AD00FC6957 /* Extensions */ = {
@@ -262,12 +323,20 @@
 			children = (
 				F3E9D85320321B0A0085424F /* NewtOperation.swift */,
 				F3E9D85B20321CD30085424F /* ImageListOperation.swift */,
-				F3E9D85F203256120085424F /* StatsOperation.swift */,
+				F3E9D85F203256120085424F /* StatsListOperation.swift */,
+				F34D0781205D6ABB00946F3F /* StatsOperation.swift */,
 				F35FFDBB203393D000095DCA /* ResetOperation.swift */,
 				F3DD97132034B861006B1235 /* EraseOperation.swift */,
 				F3DD97172034B8DF006B1235 /* ConfirmOperation.swift */,
 				F3DD971A2034BE34006B1235 /* TestOperation.swift */,
 				F3DD971D2034BEF7006B1235 /* UploadOperation.swift */,
+				F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */,
+				F34D0749205D2ED400946F3F /* MPStatsOperation.swift */,
+				F34D0761205D3CFF00946F3F /* LogClearOperation.swift */,
+				F34D0765205D3D0C00946F3F /* LogLevelListOperation.swift */,
+				F34D076D205D3D1C00946F3F /* LogListOperation.swift */,
+				F34D0771205D3D2F00946F3F /* LogModuleListOperation.swift */,
+				F34D0775205D3D3D00946F3F /* LogShowOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -326,9 +395,8 @@
 			children = (
 				F3E9D85820321B990085424F /* NewtService.swift */,
 				F3A6BB1C2030BC73007AF2DB /* Constants.swift */,
-				F3A6BB2A2030C21E007AF2DB /* Command.swift */,
 				F3A6BB192030B621007AF2DB /* Packet.swift */,
-				F35FFDB820338E5C00095DCA /* Image.swift */,
+				F34D0744205D1FFA00946F3F /* Model */,
 				F35FFDBE2033980800095DCA /* Operations */,
 			);
 			path = Newt;
@@ -561,20 +629,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34D075A205D37AA00946F3F /* MPStat.swift in Sources */,
 				F310C62120409E4900D38489 /* NewtService.swift in Sources */,
 				F310C62220409E4900D38489 /* Constants.swift in Sources */,
-				F310C62320409E4900D38489 /* Command.swift in Sources */,
 				F310C62420409E4900D38489 /* Packet.swift in Sources */,
+				F34D074C205D2ED400946F3F /* MPStatsOperation.swift in Sources */,
 				F310C62520409E4900D38489 /* Image.swift in Sources */,
+				F34D0774205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */,
+				F34D073D205D1F8700946F3F /* TaskStatsOperation.swift in Sources */,
+				F3525A50205D6BFF004547F6 /* Stat.swift in Sources */,
 				F310C62620409E4900D38489 /* NewtOperation.swift in Sources */,
+				F34D0768205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */,
 				F310C62720409E4900D38489 /* ImageListOperation.swift in Sources */,
-				F310C62820409E4900D38489 /* StatsOperation.swift in Sources */,
+				F310C62820409E4900D38489 /* StatsListOperation.swift in Sources */,
+				F34D0770205D3D1C00946F3F /* LogListOperation.swift in Sources */,
 				F310C62920409E4900D38489 /* ResetOperation.swift in Sources */,
 				F310C62A20409E4900D38489 /* EraseOperation.swift in Sources */,
 				F310C62B20409E4900D38489 /* ConfirmOperation.swift in Sources */,
+				F34D0780205D439000946F3F /* LogModule.swift in Sources */,
+				F34D0748205D200E00946F3F /* TaskStat.swift in Sources */,
+				F34D0784205D6ABB00946F3F /* StatsOperation.swift in Sources */,
 				F310C62C20409E4900D38489 /* TestOperation.swift in Sources */,
+				F34D077C205D426900946F3F /* LogLevel.swift in Sources */,
 				F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */,
+				F34D0778205D3D3D00946F3F /* LogShowOperation.swift in Sources */,
 				F310C62E20409E4900D38489 /* Data+Util.swift in Sources */,
+				F34D0764205D3CFF00946F3F /* LogClearOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,20 +662,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34D0759205D37AA00946F3F /* MPStat.swift in Sources */,
 				F34D3D6420409D7200FC6957 /* Data+Util.swift in Sources */,
 				F34D3D5C20409D6D00FC6957 /* NewtOperation.swift in Sources */,
 				F34D3D5D20409D6D00FC6957 /* ImageListOperation.swift in Sources */,
-				F34D3D5E20409D6D00FC6957 /* StatsOperation.swift in Sources */,
+				F34D3D5E20409D6D00FC6957 /* StatsListOperation.swift in Sources */,
+				F34D074B205D2ED400946F3F /* MPStatsOperation.swift in Sources */,
 				F34D3D5F20409D6D00FC6957 /* ResetOperation.swift in Sources */,
+				F34D0773205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */,
+				F34D073C205D1F8700946F3F /* TaskStatsOperation.swift in Sources */,
+				F3525A4F205D6BFF004547F6 /* Stat.swift in Sources */,
 				F34D3D6020409D6D00FC6957 /* EraseOperation.swift in Sources */,
+				F34D0767205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */,
 				F34D3D6120409D6D00FC6957 /* ConfirmOperation.swift in Sources */,
 				F34D3D6220409D6D00FC6957 /* TestOperation.swift in Sources */,
+				F34D076F205D3D1C00946F3F /* LogListOperation.swift in Sources */,
 				F34D3D6320409D6D00FC6957 /* UploadOperation.swift in Sources */,
 				F34D3D5720409D6800FC6957 /* NewtService.swift in Sources */,
 				F34D3D5820409D6800FC6957 /* Constants.swift in Sources */,
-				F34D3D5920409D6800FC6957 /* Command.swift in Sources */,
+				F34D077F205D439000946F3F /* LogModule.swift in Sources */,
+				F34D0747205D200E00946F3F /* TaskStat.swift in Sources */,
+				F34D0783205D6ABB00946F3F /* StatsOperation.swift in Sources */,
+				F34D077B205D426900946F3F /* LogLevel.swift in Sources */,
 				F34D3D5A20409D6800FC6957 /* Packet.swift in Sources */,
+				F34D0777205D3D3D00946F3F /* LogShowOperation.swift in Sources */,
 				F34D3D5B20409D6800FC6957 /* Image.swift in Sources */,
+				F34D0763205D3CFF00946F3F /* LogClearOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,20 +695,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34D0758205D37AA00946F3F /* MPStat.swift in Sources */,
 				F3DD97192034B8DF006B1235 /* ConfirmOperation.swift in Sources */,
 				F3DD971C2034BE34006B1235 /* TestOperation.swift in Sources */,
 				F3A6BB0B2030B549007AF2DB /* NewtKitTests.swift in Sources */,
 				F3DD97152034B861006B1235 /* EraseOperation.swift in Sources */,
+				F34D074A205D2ED400946F3F /* MPStatsOperation.swift in Sources */,
 				F35FFDBA20338E5C00095DCA /* Image.swift in Sources */,
+				F34D0772205D3D2F00946F3F /* LogModuleListOperation.swift in Sources */,
+				F34D073B205D1F8700946F3F /* TaskStatsOperation.swift in Sources */,
+				F3525A4E205D6BFF004547F6 /* Stat.swift in Sources */,
 				F3E9D85520321B0A0085424F /* NewtOperation.swift in Sources */,
+				F34D0766205D3D0C00946F3F /* LogLevelListOperation.swift in Sources */,
 				F35FFDBD203393D000095DCA /* ResetOperation.swift in Sources */,
 				F3E9D85A20321B990085424F /* NewtService.swift in Sources */,
+				F34D076E205D3D1C00946F3F /* LogListOperation.swift in Sources */,
 				F3DD971F2034BEF7006B1235 /* UploadOperation.swift in Sources */,
 				F3A6BB1B2030B621007AF2DB /* Packet.swift in Sources */,
 				F3A6BB1E2030BC73007AF2DB /* Constants.swift in Sources */,
-				F3A6BB2C2030C21E007AF2DB /* Command.swift in Sources */,
+				F34D077E205D439000946F3F /* LogModule.swift in Sources */,
+				F34D0746205D200E00946F3F /* TaskStat.swift in Sources */,
+				F34D0782205D6ABB00946F3F /* StatsOperation.swift in Sources */,
+				F34D077A205D426900946F3F /* LogLevel.swift in Sources */,
 				F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */,
-				F3E9D861203256120085424F /* StatsOperation.swift in Sources */,
+				F34D0776205D3D3D00946F3F /* LogShowOperation.swift in Sources */,
+				F3E9D861203256120085424F /* StatsListOperation.swift in Sources */,
+				F34D0762205D3CFF00946F3F /* LogClearOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

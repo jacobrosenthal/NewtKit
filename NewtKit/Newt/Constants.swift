@@ -69,6 +69,7 @@ public enum ResponseCode: Int, Error {
 	case badState = 6
 	case perUser = 256
 	
+    // From app
 	case invalidCbor = 1000
 	case parseError = 1001
 }
