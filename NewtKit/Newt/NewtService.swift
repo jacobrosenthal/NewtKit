@@ -15,9 +15,6 @@ public protocol NewtServiceTransportProtocol: class {
 }
 
 public class NewtService {
-	public static let NewtServiceUUID = CBUUID(string: "8D53DC1D-1DB7-4CD3-868B-8A527460AA84")
-	public static let NewtCharacteristicUUID = CBUUID(string:"DA2E7828-FBCE-4E01-AE9E-261174997C48")
-	
 	public var operationQueue: OperationQueue
 	public var timer: Timer?
 	public var receivedData: Data!
@@ -25,9 +22,10 @@ public class NewtService {
 	public weak var transport: NewtServiceTransportProtocol?
 	
 	public init() {
+        print("NewtService.init")
 		operationQueue = OperationQueue()
 		operationQueue.maxConcurrentOperationCount = 1
-		operationQueue.name = "com.chippd.NewtKit.NewtService"
+		operationQueue.name = "NewtKit.NewtService"
 	}
 	
 	public func clearQueue() {

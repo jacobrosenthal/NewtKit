@@ -31,7 +31,7 @@ class LogListOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let logsArray = cbor["log_list"]?.arrayValue {
-            let logs: [String] = logsArray.flatMap { return $0.string }
+            let logs: [String] = logsArray.compactMap { return $0.string }
             resultClosure?(.success(logs))
         } else {
             resultClosure?(.failure(.invalidCbor))

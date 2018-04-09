@@ -32,7 +32,7 @@ class MPStatsOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let mpStatsDict = cbor["mpools"]?.dictionaryValue {
-            let mpStats: [MPStat] = mpStatsDict.flatMap {
+            let mpStats: [MPStat] = mpStatsDict.compactMap {
                 let key = $0.key
                 let value = $0.value
                 

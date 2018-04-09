@@ -31,7 +31,7 @@ class LogModuleListOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let modulesDict = cbor["module_map"]?.dictionaryValue {
-            let modules: [LogModule] = modulesDict.flatMap {
+            let modules: [LogModule] = modulesDict.compactMap {
                 guard let id = $0.value.int, let name = $0.key.string else { return nil }
                 return LogModule(id: id, name: name)
             }

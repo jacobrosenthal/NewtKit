@@ -32,7 +32,7 @@ class TaskStatsOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let taskStatsDict = cbor["tasks"]?.dictionaryValue {
-            let taskStats: [TaskStat] = taskStatsDict.flatMap {
+            let taskStats: [TaskStat] = taskStatsDict.compactMap {
                 let key = $0.key
                 let value = $0.value
                 

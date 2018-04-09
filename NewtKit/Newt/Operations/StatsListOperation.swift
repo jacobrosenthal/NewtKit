@@ -32,7 +32,7 @@ class StatsListOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let statsArray = cbor["stat_list"]?.arrayValue {
-            let stats = statsArray.flatMap { $0.string }
+            let stats = statsArray.compactMap { $0.string }
             resultClosure?(.success(stats))
         } else {
             resultClosure?(.failure(.invalidCbor))

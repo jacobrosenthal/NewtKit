@@ -35,7 +35,7 @@ class StatsOperation: NewtOperation {
     
     override func didReceive(packet: Packet) {
         if let cbor = packet.cborFromData(), let statsDict = cbor["fields"]?.dictionaryValue {
-            let stats: [Stat] = statsDict.flatMap {
+            let stats: [Stat] = statsDict.compactMap {
                 if  let name = $0.key.string,
                     let value = $0.value.int {
                     
