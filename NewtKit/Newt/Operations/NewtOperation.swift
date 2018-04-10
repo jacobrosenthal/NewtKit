@@ -52,6 +52,7 @@ class NewtOperation: Operation {
 	
 	var packet: Packet!
 	weak var newtService: NewtService?
+    var finishOnDisconnect: Bool { return false }
 	
 	init(newtService: NewtService) {
 		super.init()
@@ -60,6 +61,7 @@ class NewtOperation: Operation {
 	
 	override func main() {
 		guard !isCancelled else {
+            print("NewtOperation.main() - isCancelled")
 			finish(true)
 			return
 		}
@@ -67,7 +69,10 @@ class NewtOperation: Operation {
 	}
 	
 	func sendPacket() {
-		guard packet != nil else { return }
+		guard packet != nil else {
+            print("NewtOperation.sendPacket() - packet is nil")
+            return
+        }
 		
 		let data = packet.serialized()
 		newtService?.transport?.newtService(newtService!, write: data)
@@ -77,7 +82,7 @@ class NewtOperation: Operation {
 	func didTimeout() { }
 	
 	func responseCode(inCBOR: CBOR) -> ResponseCode? {
-		print("cbor: \(inCBOR)")
+		print("NewtOperation.cbor: \(inCBOR)")
 		if let rc = inCBOR["rc"]?.int {
 			print("rc \(rc)")
 			return ResponseCode(rawValue: rc)

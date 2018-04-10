@@ -71,7 +71,7 @@ struct Packet {
 			mutableData.append(data)
 		}
 		
-		print(mutableData.fullHexString)
+		print("Packet.serialized() -> \(mutableData.fullHexString)")
 		
 		return mutableData
 	}

@@ -20,6 +20,7 @@ class UploadOperation: NewtOperation {
 	var data: Data
 	
 	init(newtService: NewtService, data: Data, progress: UploadProgressClosure?, result: UploadResultClosure?) {
+        print("UploadOperation.init")
 		self.data = data
 		self.progressClosure = progress
 		self.resultClosure = result
@@ -29,12 +30,16 @@ class UploadOperation: NewtOperation {
 	
 	override func main() {
 		super.main()
+        
+        print("UploadOperation.main")
 
 		// create and send 1st
 		if let packet = nextPacket(data: data, offset: 0) {
 			print("upload first packet sent")
 			newtService?.transport?.newtService(newtService!, write: packet.serialized())
-		}
+        } else {
+            print("UploadOperation can't get 1st packet")
+        }
 	}
 	
 	override func didReceive(packet: Packet) {

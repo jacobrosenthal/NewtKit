@@ -14,8 +14,11 @@ public typealias EraseResultClosure = ((Result<Void, NewtError>) -> Void)
 
 class EraseOperation: NewtOperation {
 	private var resultClosure: EraseResultClosure?
+    
+    override var finishOnDisconnect: Bool { return true }
 	
 	init(newtService: NewtService, result: EraseResultClosure?) {
+        print("EraseOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
@@ -26,6 +29,8 @@ class EraseOperation: NewtOperation {
 	
 	override func main() {
 		super.main()
+        
+        print("EraseOperation.main")
 		
 		sendPacket()
 	}

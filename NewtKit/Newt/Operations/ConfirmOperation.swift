@@ -16,6 +16,7 @@ class ConfirmOperation: NewtOperation {
 	private var resultClosure: ConfirmResultClosure?
 	
 	init(newtService: NewtService, hash: Data? = nil, result: ConfirmResultClosure?) {
+        print("ConfirmOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
@@ -29,6 +30,8 @@ class ConfirmOperation: NewtOperation {
 	
 	override func main() {
 		super.main()
+        
+        print("ConfirmOperation.main")
 		
 		sendPacket()
 	}

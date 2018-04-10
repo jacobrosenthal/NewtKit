@@ -16,6 +16,7 @@ class ResetOperation: NewtOperation {
 	private var resultClosure: ResetResultClosure?
 	
 	init(newtService: NewtService, result: ResetResultClosure?) {
+        print("ResetOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
@@ -25,6 +26,8 @@ class ResetOperation: NewtOperation {
 	
 	override func main() {
 		super.main()
+        
+        print("ResetOperation.main")
 		
 		sendPacket()
 	}

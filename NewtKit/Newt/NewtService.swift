@@ -29,6 +29,7 @@ public class NewtService {
 	}
 	
 	public func clearQueue() {
+        print("NewtService.clearQueue()")
 		(operationQueue.operations.first as? NewtOperation)?.finish()
 		operationQueue.cancelAllOperations()
 	}
@@ -54,6 +55,14 @@ public class NewtService {
 			receivedData = nil
 		}
 	}
+    
+    public func transportDidDisconnect() {
+        guard let op = operationQueue.operations.first as? NewtOperation else { return }
+        op.finish()
+        if op.finishOnDisconnect {
+            
+        }
+    }
 	
 	func willStartOperation(_ operation: NewtOperation) {
 		timer?.invalidate()
@@ -69,6 +78,8 @@ public class NewtService {
 		print("Operation timeout \(timer.userInfo.debugDescription)")
 		(operationQueue.operations.first as? NewtOperation)?.didTimeout()
 	}
+    
+    
 	
 	// MARK: - Requests
 	
