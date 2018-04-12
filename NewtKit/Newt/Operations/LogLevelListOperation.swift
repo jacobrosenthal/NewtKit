@@ -30,8 +30,20 @@ class LogLevelListOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let levelsDict = cbor["level_map"]?.dictionaryValue {
-            let logLevels: [LogLevel] = levelsDict.compactMap { return LogLevel(rawValue: $0.value.intValue) }
+//        if let cbor = packet.cborFromData(), let levelsDict = cbor["level_map"]?.dictionaryValue {
+//            let logLevels: [LogLevel] = levelsDict.compactMap { return LogLevel(rawValue: $0.value.intValue) }
+//            resultClosure?(.success(logLevels))
+//        } else {
+//            resultClosure?(.failure(.invalidCbor))
+//        }
+        
+        if let cbor = packet.cborFromData(), case let CBOR.map(levelsDict)? = cbor["level_map"] {
+            let logLevels: [LogLevel] = levelsDict.compactMap {
+                if case let CBOR.unsignedInt(value) = $0.value {
+                    return LogLevel(rawValue: Int(value))
+                }
+                return nil
+            }
             resultClosure?(.success(logLevels))
         } else {
             resultClosure?(.failure(.invalidCbor))

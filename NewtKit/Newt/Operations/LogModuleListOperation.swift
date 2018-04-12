@@ -30,10 +30,22 @@ class LogModuleListOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let modulesDict = cbor["module_map"]?.dictionaryValue {
+//        if let cbor = packet.cborFromData(), let modulesDict = cbor["module_map"]?.dictionaryValue {
+//            let modules: [LogModule] = modulesDict.compactMap {
+//                guard let id = $0.value.int, let name = $0.key.string else { return nil }
+//                return LogModule(id: id, name: name)
+//            }
+//            resultClosure?(.success(modules))
+//        } else {
+//            resultClosure?(.failure(.invalidCbor))
+//        }
+        
+        if let cbor = packet.cborFromData(), case let CBOR.map(modulesDict)? = cbor["module_map"] {
             let modules: [LogModule] = modulesDict.compactMap {
-                guard let id = $0.value.int, let name = $0.key.string else { return nil }
-                return LogModule(id: id, name: name)
+                if case let CBOR.unsignedInt(id) = $0.value, case let CBOR.utf8String(name) = $0.key {
+                    return LogModule(id: Int(id), name: name)
+                }
+                return nil
             }
             resultClosure?(.success(modules))
         } else {

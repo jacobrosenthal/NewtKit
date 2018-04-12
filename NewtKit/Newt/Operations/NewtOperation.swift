@@ -87,10 +87,13 @@ class NewtOperation: Operation {
     func transportDidDisconnect() {}
 	
 	func responseCode(inCBOR: CBOR) -> ResponseCode? {
-		if let rc = inCBOR["rc"]?.int {
-			print("CBOR.rc \(rc)")
-			return ResponseCode(rawValue: rc)
-		}
+        if case let CBOR.unsignedInt(rc)? = inCBOR["rc"] {
+            return ResponseCode(rawValue: Int(rc))
+        }
+//        if let rc = inCBOR["rc"]?.int {
+//            print("CBOR.rc \(rc)")
+//            return ResponseCode(rawValue: rc)
+//        }
 		return nil
 	}
 	

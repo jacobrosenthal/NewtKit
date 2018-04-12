@@ -31,8 +31,20 @@ class StatsListOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let statsArray = cbor["stat_list"]?.arrayValue {
-            let stats = statsArray.compactMap { $0.string }
+//        if let cbor = packet.cborFromData(), let statsArray = cbor["stat_list"]?.arrayValue {
+//            let stats = statsArray.compactMap { $0.string }
+//            resultClosure?(.success(stats))
+//        } else {
+//            resultClosure?(.failure(.invalidCbor))
+//        }
+        
+        if let cbor = packet.cborFromData(), case let CBOR.array(statsArray)? = cbor["stat_list"] {
+            let stats: [String] = statsArray.compactMap {
+                if case let CBOR.utf8String(stat) = $0 {
+                    return stat
+                }
+                return nil
+            }
             resultClosure?(.success(stats))
         } else {
             resultClosure?(.failure(.invalidCbor))

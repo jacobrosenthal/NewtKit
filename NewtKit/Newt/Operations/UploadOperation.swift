@@ -39,24 +39,32 @@ class UploadOperation: NewtOperation {
         }
 	}
 	
-    var currentOffset = 0
+    var currentOffset: UInt = 0
 	override func didReceive(packet: Packet) {
 		if let cbor = packet.cborFromData() {
 			print(cbor)
 			
-			if let nextOffset = cbor["off"]?.int {
+//            if let nextOffset = cbor["off"]?.int {
+//                currentOffset = nextOffset
+//
+//                print("upload next packet")
+//
+//                sendNextPacket(offset: nextOffset)
+//            }
+
+            if case let CBOR.unsignedInt(nextOffset)? = cbor["off"] {
                 currentOffset = nextOffset
                 
-				print("upload next packet")
-				
-				sendNextPacket(offset: nextOffset)
-			}
-		}
+                print("upload next packet")
+                
+                sendNextPacket(offset: nextOffset)
+            }
+        }
         
         retries = 3
 	}
     
-    private func sendNextPacket(offset: Int) {
+    private func sendNextPacket(offset: UInt) {
         let progress = Double(offset) / Double(data.count)
         let shouldContinue = progressClosure?(progress) ?? true
         
@@ -69,22 +77,22 @@ class UploadOperation: NewtOperation {
         }
     }
 	
-	let kFragmentMaxSize = 80
-	func nextPacket(data: Data, offset: Int) -> Packet? {
+    let kFragmentMaxSize: UInt = 80
+	func nextPacket(data: Data, offset: UInt) -> Packet? {
 		guard offset < data.count else { return nil }
 		
-		let upperLimit = min(offset+kFragmentMaxSize, data.count)
-		let subData = data.subdata(in: offset..<upperLimit)
-
+		let upperLimit = min(offset+kFragmentMaxSize, UInt(data.count))
+		let subData = data.subdata(in: Int(offset)..<Int(upperLimit))
+        
 		var cbor: CBOR
 		if offset == 0 {
-			cbor = CBOR(dictionaryLiteral: ("off", CBOR(integerLiteral: offset)),
-							("data", CBOR(byteString: Array<UInt8>(subData))),
+			cbor = CBOR(dictionaryLiteral: ("off", CBOR(integerLiteral: Int(offset))),
+							("data", CBOR.byteString(Array<UInt8>(subData))),
 							("len", CBOR(integerLiteral: data.count))
 			)
 		} else {
-			cbor = CBOR(dictionaryLiteral: ("off", CBOR(integerLiteral: offset)),
-							("data", CBOR(byteString: Array<UInt8>(subData)))
+			cbor = CBOR(dictionaryLiteral: ("off", CBOR(integerLiteral: Int(offset))),
+							("data", CBOR.byteString(Array<UInt8>(subData)))
 			)
 		}
 		
