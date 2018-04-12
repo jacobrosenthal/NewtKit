@@ -21,7 +21,7 @@ class ConfirmOperation: NewtOperation {
 		super.init(newtService: newtService)
 		
 		let cbor = CBOR(dictionaryLiteral: ("confirm", true),
-						("hash", hash != nil ? CBOR(byteString: Array<UInt8>(hash!)) : CBOR(nilLiteral: ()))
+						("hash", hash != nil ? CBOR.byteString(Array<UInt8>(hash!)) : CBOR(nilLiteral: ()))
 		)
 		let cborData = Data(cbor.encode())
 		self.packet = Packet(op: .write, flags: 0, length: cborData.count, group: NMGRGroup.image, seq: 0, id: NMGRImagesCommand.state.rawValue, data: cborData)

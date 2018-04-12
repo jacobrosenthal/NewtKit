@@ -30,8 +30,20 @@ class LogListOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let logsArray = cbor["log_list"]?.arrayValue {
-            let logs: [String] = logsArray.compactMap { return $0.string }
+//        if let cbor = packet.cborFromData(), let logsArray = cbor["log_list"]?.arrayValue {
+//            let logs: [String] = logsArray.compactMap { return $0.string }
+//            resultClosure?(.success(logs))
+//        } else {
+//            resultClosure?(.failure(.invalidCbor))
+//        }
+        
+        if let cbor = packet.cborFromData(), case let CBOR.array(logsArray)? = cbor["log_list"] {
+            let logs: [String] = logsArray.compactMap {
+                if case let CBOR.utf8String(name) = $0 {
+                    return name
+                }
+                return nil
+            }
             resultClosure?(.success(logs))
         } else {
             resultClosure?(.failure(.invalidCbor))

@@ -31,21 +31,21 @@ class MPStatsOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let mpStatsDict = cbor["mpools"]?.dictionaryValue {
-            let mpStats: [MPStat] = mpStatsDict.compactMap {
-                let key = $0.key
-                let value = $0.value
-                
-                if  let name = key.string,
-                    let blksz = value["blksiz"]?.intValue,
-                    let cnt = value["nblks"]?.intValue,
-                    let min = value["min"]?.intValue,
-                    let free = value["nfree"]?.intValue {
+        if let cbor = packet.cborFromData(), case let CBOR.map(mpStatsDict)? = cbor["mpools"] {
+                let mpStats: [MPStat] = mpStatsDict.compactMap {
+                    let key = $0.key
+                    let value = $0.value
                     
-                    return MPStat(name: name, blksz: blksz, cnt: cnt, free: free, min: min)
+                    if  case let CBOR.utf8String(name) = key,
+                        case let CBOR.unsignedInt(blksz)? = value["blksiz"],
+                        case let CBOR.unsignedInt(cnt)? = value["nblks"],
+                        case let CBOR.unsignedInt(min)? = value["min"],
+                        case let CBOR.unsignedInt(free)? = value["nfree"] {
+                        
+                        return MPStat(name: name, blksz: Int(blksz), cnt: Int(cnt), free: Int(free), min: Int(min))
+                    }
+                    return nil
                 }
-                return nil
-            }
             resultClosure?(.success(mpStats))
         } else {
             resultClosure?(.failure(.parseError))

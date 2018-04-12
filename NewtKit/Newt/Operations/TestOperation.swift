@@ -22,7 +22,7 @@ class TestOperation: NewtOperation {
 		super.init(newtService: newtService)
 		
 		let cbor = CBOR(dictionaryLiteral:
-			("hash", hash != nil ? CBOR(byteString: Array<UInt8>(hash!)) : CBOR(nilLiteral: ())),
+			("hash", hash != nil ? CBOR.byteString(Array<UInt8>(hash!)) : CBOR(nilLiteral: ())),
 			("confirm", false)
 		)
 		let cborData = Data(cbor.encode())
@@ -36,9 +36,7 @@ class TestOperation: NewtOperation {
 	}
 	
 	override func didReceive(packet: Packet) {
-		if let cbor = packet.cborFromData() { 
-			print("TEST \(cbor)")
-			
+		if let cbor = packet.cborFromData() { 			
 			resultClosure?(.success(()))
 		} else {
 			resultClosure?(.failure(NewtError.invalidCbor))

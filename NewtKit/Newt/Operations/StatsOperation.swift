@@ -34,12 +34,24 @@ class StatsOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData(), let statsDict = cbor["fields"]?.dictionaryValue {
+//        if let cbor = packet.cborFromData(), let statsDict = cbor["fields"]?.dictionaryValue {
+//            let stats: [Stat] = statsDict.compactMap {
+//                if  let name = $0.key.string,
+//                    let value = $0.value.int {
+//
+//                    return Stat(name: name, value: value)
+//                }
+//                return nil
+//            }
+//            resultClosure?(.success(stats))
+//        } else {
+//            resultClosure?(.failure(.invalidCbor))
+//        }
+
+        if let cbor = packet.cborFromData(), case let CBOR.map(statsDict)? = cbor["fields"] {
             let stats: [Stat] = statsDict.compactMap {
-                if  let name = $0.key.string,
-                    let value = $0.value.int {
-                    
-                    return Stat(name: name, value: value)
+                if case let CBOR.utf8String(name) = $0.key, case let CBOR.unsignedInt(value) = $0.value {
+                    return Stat(name: name, value: Int(value))
                 }
                 return nil
             }
@@ -47,7 +59,7 @@ class StatsOperation: NewtOperation {
         } else {
             resultClosure?(.failure(.invalidCbor))
         }
-
+        
         executing(false)
         finish(true)
     }
