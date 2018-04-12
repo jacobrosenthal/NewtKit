@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftCBOR
+import CBOR
 @testable import NewtKit
 
 class NewtKitTests: XCTestCase {

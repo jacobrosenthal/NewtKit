@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F310C60D20409DD200D38489 /* NewtKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A6BAFF2030B549007AF2DB /* NewtKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F310C61220409DFD00D38489 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3CFF204099E100FC6957 /* Result.framework */; };
-		F310C61320409DFD00D38489 /* SwiftCBOR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */; };
 		F310C61D20409E3100D38489 /* NewtKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F310C61B20409E3100D38489 /* NewtKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F310C62120409E4900D38489 /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
 		F310C62220409E4900D38489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6BB1C2030BC73007AF2DB /* Constants.swift */; };
@@ -24,8 +22,6 @@
 		F310C62C20409E4900D38489 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
 		F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
 		F310C62E20409E4900D38489 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
-		F310C63320409E6200D38489 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3CFB204099E100FC6957 /* Result.framework */; };
-		F310C63420409E6200D38489 /* SwiftCBOR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */; };
 		F34D073B205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
 		F34D073C205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
 		F34D073D205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
@@ -91,101 +87,8 @@
 		F3E9D85A20321B990085424F /* NewtService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85820321B990085424F /* NewtService.swift */; };
 		F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85B20321CD30085424F /* ImageListOperation.swift */; };
 		F3E9D861203256120085424F /* StatsListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9D85F203256120085424F /* StatsListOperation.swift */; };
+		F3EEAEB5207D373800EBB84E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EEAEB4207D373800EBB84E /* Result.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F310C60E20409DF200D38489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 37F34C001C0265AD00D36B5B;
-			remoteInfo = SwiftCBOR;
-		};
-		F310C61020409DF500D38489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D454807C1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		F310C62F20409E5300D38489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 37F34C001C0265AD00D36B5B;
-			remoteInfo = SwiftCBOR;
-		};
-		F310C63120409E5300D38489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D45480561A9572F5009D7229;
-			remoteInfo = "Result-Mac";
-		};
-		F34D3CFA204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480571A9572F5009D7229;
-			remoteInfo = "Result-Mac";
-		};
-		F34D3CFC204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480671A9572F5009D7229;
-			remoteInfo = "Result-MacTests";
-		};
-		F34D3CFE204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D454807D1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		F34D3D00204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480871A957362009D7229;
-			remoteInfo = "Result-iOSTests";
-		};
-		F34D3D02204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
-			remoteInfo = "Result-tvOS";
-		};
-		F34D3D04204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE541BA280E000130C48;
-			remoteInfo = "Result-tvOSTests";
-		};
-		F34D3D06204099E100FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D03579A31B2B788F005D26AE;
-			remoteInfo = "Result-watchOS";
-		};
-		F34D3D0D204099E500FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37F34C011C0265AD00D36B5B;
-			remoteInfo = SwiftCBOR;
-		};
-		F34D3D0F204099E500FC6957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37F34C0B1C0265AE00D36B5B;
-			remoteInfo = SwiftCBORTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F310C61920409E3100D38489 /* NewtKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,8 +106,6 @@
 		F34D0779205D426900946F3F /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		F34D077D205D439000946F3F /* LogModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModule.swift; sourceTree = "<group>"; };
 		F34D0781205D6ABB00946F3F /* StatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsOperation.swift; sourceTree = "<group>"; };
-		F34D3CF0204099E100FC6957 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Vendor/Result/Result.xcodeproj; sourceTree = SOURCE_ROOT; };
-		F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftCBOR.xcodeproj; path = Vendor/SwiftCBOR/SwiftCBOR.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F34D3D4F20409D5800FC6957 /* NewtKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3525A4D205D6BFF004547F6 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		F35FFDB620336CFD00095DCA /* Data+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Util.swift"; sourceTree = "<group>"; };
@@ -225,6 +126,7 @@
 		F3E9D85820321B990085424F /* NewtService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtService.swift; sourceTree = "<group>"; };
 		F3E9D85B20321CD30085424F /* ImageListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListOperation.swift; sourceTree = "<group>"; };
 		F3E9D85F203256120085424F /* StatsListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsListOperation.swift; sourceTree = "<group>"; };
+		F3EEAEB4207D373800EBB84E /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F310C63320409E6200D38489 /* Result.framework in Frameworks */,
-				F310C63420409E6200D38489 /* SwiftCBOR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,8 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F310C61220409DFD00D38489 /* Result.framework in Frameworks */,
-				F310C61320409DFD00D38489 /* SwiftCBOR.framework in Frameworks */,
+				F3EEAEB5207D373800EBB84E /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,38 +183,6 @@
 				F35FFDB620336CFD00095DCA /* Data+Util.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F34D3CEF204099D500FC6957 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */,
-				F34D3CF0204099E100FC6957 /* Result.xcodeproj */,
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		F34D3CF1204099E100FC6957 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F34D3CFB204099E100FC6957 /* Result.framework */,
-				F34D3CFD204099E100FC6957 /* Result-MacTests.xctest */,
-				F34D3CFF204099E100FC6957 /* Result.framework */,
-				F34D3D01204099E100FC6957 /* Result-iOSTests.xctest */,
-				F34D3D03204099E100FC6957 /* Result.framework */,
-				F34D3D05204099E100FC6957 /* Result-tvOSTests.xctest */,
-				F34D3D07204099E100FC6957 /* Result.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F34D3D09204099E500FC6957 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */,
-				F34D3D10204099E500FC6957 /* SwiftCBORTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F35FFDBE2033980800095DCA /* Operations */ = {
@@ -365,7 +232,6 @@
 		F3A6BAFE2030B549007AF2DB /* NewtKit */ = {
 			isa = PBXGroup;
 			children = (
-				F34D3CEF204099D500FC6957 /* Vendor */,
 				F3A6BAFF2030B549007AF2DB /* NewtKit.h */,
 				F3E9D85E20321DFF0085424F /* Newt */,
 				F34D3CC5204097AD00FC6957 /* Extensions */,
@@ -386,6 +252,7 @@
 		F3A6BB282030C0BC007AF2DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3EEAEB4207D373800EBB84E /* Result.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -436,8 +303,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F310C63020409E5300D38489 /* PBXTargetDependency */,
-				F310C63220409E5300D38489 /* PBXTargetDependency */,
 			);
 			name = "NewtKit-macOS";
 			productName = "NewtKit-macOS";
@@ -456,8 +321,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F310C60F20409DF200D38489 /* PBXTargetDependency */,
-				F310C61120409DF500D38489 /* PBXTargetDependency */,
 			);
 			name = "NewtKit-iOS";
 			productName = "NewtKit-iOS";
@@ -515,16 +378,6 @@
 			mainGroup = F3A6BAF22030B549007AF2DB;
 			productRefGroup = F3A6BAFD2030B549007AF2DB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F34D3CF1204099E100FC6957 /* Products */;
-					ProjectRef = F34D3CF0204099E100FC6957 /* Result.xcodeproj */;
-				},
-				{
-					ProductGroup = F34D3D09204099E500FC6957 /* Products */;
-					ProjectRef = F34D3D08204099E500FC6957 /* SwiftCBOR.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F3A6BB042030B549007AF2DB /* NewtKitTests */,
@@ -533,72 +386,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F34D3CFB204099E100FC6957 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = F34D3CFA204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3CFD204099E100FC6957 /* Result-MacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-MacTests.xctest";
-			remoteRef = F34D3CFC204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3CFF204099E100FC6957 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = F34D3CFE204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D01204099E100FC6957 /* Result-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-iOSTests.xctest";
-			remoteRef = F34D3D00204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D03204099E100FC6957 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = F34D3D02204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D05204099E100FC6957 /* Result-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-tvOSTests.xctest";
-			remoteRef = F34D3D04204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D07204099E100FC6957 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = F34D3D06204099E100FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D0E204099E500FC6957 /* SwiftCBOR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftCBOR.framework;
-			remoteRef = F34D3D0D204099E500FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F34D3D10204099E500FC6957 /* SwiftCBORTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftCBORTests.xctest;
-			remoteRef = F34D3D0F204099E500FC6957 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F310C61720409E3100D38489 /* Resources */ = {
@@ -725,29 +512,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F310C60F20409DF200D38489 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftCBOR;
-			targetProxy = F310C60E20409DF200D38489 /* PBXContainerItemProxy */;
-		};
-		F310C61120409DF500D38489 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-iOS";
-			targetProxy = F310C61020409DF500D38489 /* PBXContainerItemProxy */;
-		};
-		F310C63020409E5300D38489 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftCBOR;
-			targetProxy = F310C62F20409E5300D38489 /* PBXContainerItemProxy */;
-		};
-		F310C63220409E5300D38489 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-Mac";
-			targetProxy = F310C63120409E5300D38489 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F310C61F20409E3100D38489 /* Debug */ = {

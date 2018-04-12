@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias EraseResultClosure = ((Result<Void, NewtError>) -> Void)
@@ -15,24 +15,18 @@ public typealias EraseResultClosure = ((Result<Void, NewtError>) -> Void)
 class EraseOperation: NewtOperation {
 	private var resultClosure: EraseResultClosure?
     
-    override var finishOnDisconnect: Bool { return true }
-	
 	init(newtService: NewtService, result: EraseResultClosure?) {
-        print("EraseOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
 		
 		self.packet = Packet(op: .write, flags: 0, length: 0, group: NMGRGroup.image, seq: 0, id: NMGRImagesCommand.erase.rawValue, data: Data())
-		
 	}
 	
 	override func main() {
 		super.main()
-        
-        print("EraseOperation.main")
-		
-		sendPacket()
+
+        sendPacket()
 	}
 	
 	override func didReceive(packet: Packet) {
@@ -48,7 +42,15 @@ class EraseOperation: NewtOperation {
 			resultClosure?(.failure(.invalidCbor))
 		}
 		
-		executing(false)
-		finish(true)
+        executing(false)
+        finish(true)
 	}
+
+    override func transportDidDisconnect() {
+        guard !isFinished && !isCancelled else { return }
+        
+        resultClosure?(.success(()))
+        executing(false)
+        finish(true)
+    }
 }

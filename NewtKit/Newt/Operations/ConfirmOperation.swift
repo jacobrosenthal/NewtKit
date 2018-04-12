@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias ConfirmResultClosure = ((Result<Void, NewtError>) -> Void)
@@ -16,7 +16,6 @@ class ConfirmOperation: NewtOperation {
 	private var resultClosure: ConfirmResultClosure?
 	
 	init(newtService: NewtService, hash: Data? = nil, result: ConfirmResultClosure?) {
-        print("ConfirmOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
@@ -31,15 +30,11 @@ class ConfirmOperation: NewtOperation {
 	override func main() {
 		super.main()
         
-        print("ConfirmOperation.main")
-		
 		sendPacket()
 	}
 	
 	override func didReceive(packet: Packet) {
-		if let cbor = packet.cborFromData() {
-			print("CONFIRM \(cbor)")
-			
+		if let cbor = packet.cborFromData() {			
 			resultClosure?(.success(()))
 		} else {
 			resultClosure?(.failure(NewtError.invalidCbor))

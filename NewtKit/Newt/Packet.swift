@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 
 struct Packet {
 	static let kHeaderSize = 8

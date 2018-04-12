@@ -22,7 +22,6 @@ public class NewtService {
 	public weak var transport: NewtServiceTransportProtocol?
 	
 	public init() {
-        print("NewtService.init")
 		operationQueue = OperationQueue()
 		operationQueue.maxConcurrentOperationCount = 1
 		operationQueue.name = "NewtKit.NewtService"
@@ -56,12 +55,14 @@ public class NewtService {
 		}
 	}
     
+    public func transportDidConnect() {
+        guard let op = operationQueue.operations.first as? NewtOperation else { return }
+        op.transportDidConnect()
+    }
+    
     public func transportDidDisconnect() {
         guard let op = operationQueue.operations.first as? NewtOperation else { return }
-        op.finish()
-        if op.finishOnDisconnect {
-            
-        }
+        op.transportDidDisconnect()
     }
 	
 	func willStartOperation(_ operation: NewtOperation) {

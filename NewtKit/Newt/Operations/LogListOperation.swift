@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias LogListResultClosure = ((Result<[String], NewtError>) -> Void)

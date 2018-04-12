@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias LogModuleListResultClosure = ((Result<[LogModule], NewtError>) -> Void)

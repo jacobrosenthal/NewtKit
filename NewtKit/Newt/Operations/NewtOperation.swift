@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 
 class NewtOperation: Operation {
 	
@@ -57,15 +57,18 @@ class NewtOperation: Operation {
 	init(newtService: NewtService) {
 		super.init()
 		self.newtService = newtService
+        
+        print("\(String(describing: type(of: self))).init")
 	}
 	
 	override func main() {
 		guard !isCancelled else {
-            print("NewtOperation.main() - isCancelled")
+            print("\(String(describing: type(of: self))).main - cancelled")
 			finish(true)
 			return
 		}
 		executing(true)
+        print("\(String(describing: type(of: self))).main - executing")
 	}
 	
 	func sendPacket() {
@@ -80,11 +83,12 @@ class NewtOperation: Operation {
 	
 	func didReceive(packet: Packet) { }
 	func didTimeout() { }
+    func transportDidConnect() {}
+    func transportDidDisconnect() {}
 	
 	func responseCode(inCBOR: CBOR) -> ResponseCode? {
-		print("NewtOperation.cbor: \(inCBOR)")
 		if let rc = inCBOR["rc"]?.int {
-			print("rc \(rc)")
+			print("CBOR.rc \(rc)")
 			return ResponseCode(rawValue: rc)
 		}
 		return nil

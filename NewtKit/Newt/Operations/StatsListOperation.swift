@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias StatsListResultClosure = ((Result<[String], NewtError>) -> Void)

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias ResetResultClosure = ((Result<Void, NewtError>) -> Void)
@@ -16,7 +16,6 @@ class ResetOperation: NewtOperation {
 	private var resultClosure: ResetResultClosure?
 	
 	init(newtService: NewtService, result: ResetResultClosure?) {
-        print("ResetOperation.init")
 		self.resultClosure = result
 		
 		super.init(newtService: newtService)
@@ -27,8 +26,6 @@ class ResetOperation: NewtOperation {
 	override func main() {
 		super.main()
         
-        print("ResetOperation.main")
-		
 		sendPacket()
 	}
 	
@@ -44,8 +41,20 @@ class ResetOperation: NewtOperation {
 		} else {
 			resultClosure?(.failure(.invalidCbor))
 		}
-		
-		executing(false)
-		finish(true)
+        
+        executing(false)
+        finish(true)
 	}
+    
+    override func transportDidDisconnect() {
+        guard !isFinished && !isCancelled else { return }
+        resultClosure?(.success(()))
+        
+        executing(false)
+        finish(true)
+
+    }
+    
+//    override func transportDidConnect() {
+//    }
 }

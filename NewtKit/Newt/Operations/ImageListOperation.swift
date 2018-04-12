@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias ImageResultClosure = ((Result<[Image], NewtError>) -> Void)
@@ -17,7 +17,6 @@ class ImageListOperation: NewtOperation {
 	private var resultClosure: ImageResultClosure?
 	
 	init(newtService: NewtService, result: ImageResultClosure?) {
-        print("ImageListOperation.init")
 		self.resultClosure = result
 
 		super.init(newtService: newtService)
@@ -28,9 +27,7 @@ class ImageListOperation: NewtOperation {
 	override func main() {
 		super.main()
         
-        print("ImageListOperation.main")
-		
-		sendPacket()
+        sendPacket()
 	}
 	
 	override func didReceive(packet: Packet) {

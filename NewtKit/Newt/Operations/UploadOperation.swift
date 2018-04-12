@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftCBOR
+import CBOR
 import Result
 
 public typealias UploadProgressClosure = ((_ progress: Double) -> Bool)
@@ -20,7 +20,6 @@ class UploadOperation: NewtOperation {
 	var data: Data
 	
 	init(newtService: NewtService, data: Data, progress: UploadProgressClosure?, result: UploadResultClosure?) {
-        print("UploadOperation.init")
 		self.data = data
 		self.progressClosure = progress
 		self.resultClosure = result
@@ -31,8 +30,6 @@ class UploadOperation: NewtOperation {
 	override func main() {
 		super.main()
         
-        print("UploadOperation.main")
-
 		// create and send 1st
 		if let packet = nextPacket(data: data, offset: 0) {
 			print("upload first packet sent")
@@ -42,26 +39,35 @@ class UploadOperation: NewtOperation {
         }
 	}
 	
+    var currentOffset = 0
 	override func didReceive(packet: Packet) {
 		if let cbor = packet.cborFromData() {
 			print(cbor)
 			
 			if let nextOffset = cbor["off"]?.int {
+                currentOffset = nextOffset
+                
 				print("upload next packet")
 				
-				let progress = Double(nextOffset) / Double(data.count)
-				let shouldContinue = progressClosure?(progress) ?? true
-				
-				if let packet = nextPacket(data: data, offset: nextOffset), shouldContinue {
-					newtService?.transport?.newtService(newtService!, write: packet.serialized())
-				} else {
-					resultClosure?(.success(()))
-					
-					finish()
-				}
+				sendNextPacket(offset: nextOffset)
 			}
 		}
+        
+        retries = 3
 	}
+    
+    private func sendNextPacket(offset: Int) {
+        let progress = Double(offset) / Double(data.count)
+        let shouldContinue = progressClosure?(progress) ?? true
+        
+        if let packet = nextPacket(data: data, offset: offset), shouldContinue {
+            newtService?.transport?.newtService(newtService!, write: packet.serialized())
+        } else {
+            resultClosure?(.success(()))
+            
+            finish()
+        }
+    }
 	
 	let kFragmentMaxSize = 80
 	func nextPacket(data: Data, offset: Int) -> Packet? {
@@ -90,6 +96,22 @@ class UploadOperation: NewtOperation {
 		
 		return Packet(op: .write, flags: 0, length: cborData.count, group: NMGRGroup.image, seq: 0, id: NMGRImagesCommand.upload.rawValue, data: cborData)
 	}
+    
+    override func transportDidConnect() {
+        sendNextPacket(offset: currentOffset)
+    }
+    
+    var retries = 3
+    override func transportDidDisconnect() {
+        retries -= 1
+        
+        if retries <= 0 {
+            print("upload failed -> too many disconnects")
+            resultClosure?(.failure(.unknown))
+            
+            finish(true)
+        }
+    }
 }
 
 
