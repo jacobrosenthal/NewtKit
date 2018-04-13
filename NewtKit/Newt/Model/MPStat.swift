@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MPStat {
+public struct MPStat: Codable {
     public var name: String
     public var blksz: Int
     public var cnt: Int

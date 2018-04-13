@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct LogModule {
+public struct LogModule: Codable {
     let id: Int
     let name: String
 }

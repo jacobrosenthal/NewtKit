@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct TaskStat {
+public struct TaskStat: Codable {
     public var taskId: UInt
     public var name: String
     public var priority: UInt

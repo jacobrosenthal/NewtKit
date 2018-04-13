@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum LogLevel: Int {
+public enum LogLevel: Int, Codable {
     case debug = 0
     case info = 1
     case warn = 2

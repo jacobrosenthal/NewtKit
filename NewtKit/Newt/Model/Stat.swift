@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Stat {
+public struct Stat: Codable {
     let name: String
     let value: Int
 }

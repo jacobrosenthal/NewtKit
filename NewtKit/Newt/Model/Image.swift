@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Image {
+public struct Image: Codable {
 	public var slot: Int
 	public var version: String
 	public var isConfirmed: Bool
