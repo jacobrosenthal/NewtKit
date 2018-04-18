@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Image: Codable {
+public struct Image: Codable, CustomDebugStringConvertible {
 	public var slot: Int
 	public var version: String
 	public var isConfirmed: Bool
@@ -16,4 +16,8 @@ public struct Image: Codable {
 	public var isActive: Bool
 	public var isBootable: Bool
 	public var hash: Data
+    
+    public var debugDescription: String {
+        return "Image(slot: \(slot), version: \(version), isConfirmed: \(isConfirmed), isPending: \(isPending), isActive: \(isActive), isBootable: \(isBootable), hash: \(hash.hexString))"
+    }
 }

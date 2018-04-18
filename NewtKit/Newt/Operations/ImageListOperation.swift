@@ -10,7 +10,7 @@ import Foundation
 import CBOR
 import Result
 
-public typealias ImageResultClosure = ((Result<[Image], NewtError>) -> Void)
+public typealias ImageResultClosure = ((Result<(splitStatus: UInt, images: [Image]), NewtError>) -> Void)
 
 class ImageListOperation: NewtOperation {
 	
@@ -39,7 +39,7 @@ class ImageListOperation: NewtOperation {
 		if let cbor = packet.cborFromData() {
 			var images: [Image] = []
             
-            if case let CBOR.array(imagesCbor)? = cbor["images"] {
+            if case let .unsignedInt(splitStatus)? = cbor["splitStatus"], case let CBOR.array(imagesCbor)? = cbor["images"] {
                 for imageCbor in imagesCbor {
                     if  case let CBOR.unsignedInt(slot)? = imageCbor["slot"],
                         case let CBOR.utf8String(version)? = imageCbor["version"],
@@ -53,7 +53,7 @@ class ImageListOperation: NewtOperation {
                         images.append(image)
                     }
                 }
-                resultClosure?(.success(images))
+                resultClosure?(.success((splitStatus: splitStatus, images: images)))
             } else {
                 resultClosure?(.failure(.parseError))
             }

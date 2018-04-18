@@ -29,14 +29,7 @@ class LogListOperation: NewtOperation {
         sendPacket()
     }
     
-    override func didReceive(packet: Packet) {
-//        if let cbor = packet.cborFromData(), let logsArray = cbor["log_list"]?.arrayValue {
-//            let logs: [String] = logsArray.compactMap { return $0.string }
-//            resultClosure?(.success(logs))
-//        } else {
-//            resultClosure?(.failure(.invalidCbor))
-//        }
-        
+    override func didReceive(packet: Packet) {        
         if let cbor = packet.cborFromData(), case let CBOR.array(logsArray)? = cbor["log_list"] {
             let logs: [String] = logsArray.compactMap {
                 if case let CBOR.utf8String(name) = $0 {

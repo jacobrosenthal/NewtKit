@@ -10,7 +10,7 @@ import Foundation
 import CBOR
 import Result
 
-public typealias LogShowResultClosure = ((Result<Void, NewtError>) -> Void)
+public typealias LogShowResultClosure = ((Result<[LogEntry], NewtError>) -> Void)
 
 class LogShowOperation: NewtOperation {
     private var resultClosure: LogShowResultClosure?
@@ -33,10 +33,28 @@ class LogShowOperation: NewtOperation {
     }
     
     override func didReceive(packet: Packet) {
-        if let cbor = packet.cborFromData() {
-            print("_________ log")
-            print(cbor)
-            print("^^^^^^^^^ log")
+        if let cbor = packet.cborFromData(), case let .array(logs)? = cbor["logs"] {
+            var logEntries: [LogEntry] = []
+            for log in logs {
+                if case let .array(entries)? = log["entries"] {
+                    for entry in entries {
+                        if  case let .unsignedInt(index)? = entry["index"],
+                            case let .unsignedInt(timestamp)? = entry["ts"],
+                            case let .unsignedInt(module)? = entry["module"],
+                            case let .unsignedInt(level)? = entry["level"],
+                            case let .utf8String(msg)? = entry["msg"] {
+                            
+                            let logEntry = LogEntry(index: index, timestamp: timestamp, module: module, level: LogLevel(rawValue: Int(level)) ?? .info, message: msg)
+                            logEntries.append(logEntry)
+                        }
+                    }
+                }
+            }
+            resultClosure?(.success(logEntries))
+            
+//            print("_________ log")
+//            dump(cbor)
+//            print("^^^^^^^^^ log")
         } else {
             resultClosure?(.failure(.invalidCbor))
         }

@@ -25,6 +25,9 @@
 		F310C62C20409E4900D38489 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971A2034BE34006B1235 /* TestOperation.swift */; };
 		F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD971D2034BEF7006B1235 /* UploadOperation.swift */; };
 		F310C62E20409E4900D38489 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35FFDB620336CFD00095DCA /* Data+Util.swift */; };
+		F316037B20863B6A006A0FBD /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F316037A20863B6A006A0FBD /* LogEntry.swift */; };
+		F316037C20863B6A006A0FBD /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F316037A20863B6A006A0FBD /* LogEntry.swift */; };
+		F316037D20863B6A006A0FBD /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F316037A20863B6A006A0FBD /* LogEntry.swift */; };
 		F34D073B205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
 		F34D073C205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
 		F34D073D205D1F8700946F3F /* TaskStatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */; };
@@ -106,6 +109,7 @@
 		F310C61920409E3100D38489 /* NewtKit_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtKit_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F310C61B20409E3100D38489 /* NewtKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtKit_macOS.h; sourceTree = "<group>"; };
 		F310C61C20409E3100D38489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F316037A20863B6A006A0FBD /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		F34D073A205D1F8700946F3F /* TaskStatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatsOperation.swift; sourceTree = "<group>"; };
 		F34D0745205D200E00946F3F /* TaskStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStat.swift; sourceTree = "<group>"; };
 		F34D0749205D2ED400946F3F /* MPStatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPStatsOperation.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				F34D0757205D37AA00946F3F /* MPStat.swift */,
 				F34D0779205D426900946F3F /* LogLevel.swift */,
 				F34D077D205D439000946F3F /* LogModule.swift */,
+				F316037A20863B6A006A0FBD /* LogEntry.swift */,
 				F3525A4D205D6BFF004547F6 /* Stat.swift */,
 			);
 			path = Model;
@@ -597,6 +602,7 @@
 				F34D0780205D439000946F3F /* LogModule.swift in Sources */,
 				F34D0748205D200E00946F3F /* TaskStat.swift in Sources */,
 				F34D0784205D6ABB00946F3F /* StatsOperation.swift in Sources */,
+				F316037D20863B6A006A0FBD /* LogEntry.swift in Sources */,
 				F310C62C20409E4900D38489 /* TestOperation.swift in Sources */,
 				F34D077C205D426900946F3F /* LogLevel.swift in Sources */,
 				F310C62D20409E4900D38489 /* UploadOperation.swift in Sources */,
@@ -630,6 +636,7 @@
 				F34D3D5820409D6800FC6957 /* Constants.swift in Sources */,
 				F34D077F205D439000946F3F /* LogModule.swift in Sources */,
 				F34D0747205D200E00946F3F /* TaskStat.swift in Sources */,
+				F316037C20863B6A006A0FBD /* LogEntry.swift in Sources */,
 				F34D0783205D6ABB00946F3F /* StatsOperation.swift in Sources */,
 				F34D077B205D426900946F3F /* LogLevel.swift in Sources */,
 				F34D3D5A20409D6800FC6957 /* Packet.swift in Sources */,
@@ -663,6 +670,7 @@
 				F3A6BB1E2030BC73007AF2DB /* Constants.swift in Sources */,
 				F34D077E205D439000946F3F /* LogModule.swift in Sources */,
 				F34D0746205D200E00946F3F /* TaskStat.swift in Sources */,
+				F316037B20863B6A006A0FBD /* LogEntry.swift in Sources */,
 				F34D0782205D6ABB00946F3F /* StatsOperation.swift in Sources */,
 				F34D077A205D426900946F3F /* LogLevel.swift in Sources */,
 				F3E9D85D20321CD30085424F /* ImageListOperation.swift in Sources */,
