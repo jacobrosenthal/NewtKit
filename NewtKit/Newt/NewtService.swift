@@ -79,42 +79,41 @@ public class NewtService {
 		print("Operation timeout \(timer.userInfo.debugDescription)")
 		(operationQueue.operations.first as? NewtOperation)?.didTimeout()
 	}
+}
+
+// MARK: - Requests
+extension NewtService {
+    public func reset(result: ResetResultClosure?) {
+        operationQueue.addOperation(ResetOperation(newtService: self, result: result))
+    }
     
-    
-	
-	// MARK: - Requests
-	
-	public func reset(result: ResetResultClosure?) {
-		operationQueue.addOperation(ResetOperation(newtService: self, result: result))
-	}
-	
     public func statsList(result: StatsListResultClosure?) {
-		operationQueue.addOperation(StatsListOperation(newtService: self, result: result))
-	}
+        operationQueue.addOperation(StatsListOperation(newtService: self, result: result))
+    }
     
     public func stats(name: String, result: StatsResultClosure?) {
         operationQueue.addOperation(StatsOperation(newtService: self, name: name, result: result))
     }
-	
-	public func imageList(result: ImageResultClosure?) {
-		operationQueue.addOperation(ImageListOperation(newtService: self, result: result))
-	}
-	
-	public func imageTest(hash: Data?, result: TestResultClosure?) {
-		operationQueue.addOperation(TestOperation(newtService: self, hash: hash, result: result))
-	}
-	
-	public func imageConfirm(hash: Data?, result: TestResultClosure?) {
-		operationQueue.addOperation(ConfirmOperation(newtService: self, hash: hash, result: result))
-	}
-	
-	public func erase(result: EraseResultClosure?) {
-		operationQueue.addOperation(EraseOperation(newtService: self, result: result))
-	}
-	
-	public func upload(data: Data, progress: UploadProgressClosure?, result: UploadResultClosure?) {
-		operationQueue.addOperation(UploadOperation(newtService: self, data: data, progress: progress, result: result))
-	}
+    
+    public func imageList(result: ImageResultClosure?) {
+        operationQueue.addOperation(ImageListOperation(newtService: self, result: result))
+    }
+    
+    public func imageTest(hash: Data?, result: TestResultClosure?) {
+        operationQueue.addOperation(TestOperation(newtService: self, hash: hash, result: result))
+    }
+    
+    public func imageConfirm(hash: Data?, result: TestResultClosure?) {
+        operationQueue.addOperation(ConfirmOperation(newtService: self, hash: hash, result: result))
+    }
+    
+    public func erase(result: EraseResultClosure?) {
+        operationQueue.addOperation(EraseOperation(newtService: self, result: result))
+    }
+    
+    public func upload(data: Data, progress: UploadProgressClosure?, result: UploadResultClosure?) {
+        operationQueue.addOperation(UploadOperation(newtService: self, data: data, progress: progress, result: result))
+    }
     
     public func taskStats(result: TastStatsResultClosure?) {
         operationQueue.addOperation(TaskStatsOperation(newtService: self, result: result))
